@@ -1,11 +1,11 @@
 // Team roster (key players only)
 const teamMembers = [
-    { name: "Marcus Johnson", position: "GK", number: 1, emoji: "👨‍🦰" },
-    { name: "Alex Rivera", position: "DEF", number: 2, emoji: "👨" },
-    { name: "David Chen", position: "MID", number: 7, emoji: "👨" },
-    { name: "Luis Rodriguez", position: "FWD", number: 9, emoji: "👨‍🦲" },
-    { name: "Tom Wilson", position: "MID", number: 10, emoji: "👨" },
-    { name: "Carlos Silva", position: "DEF", number: 3, emoji: "👨‍🦱" }
+    { name: "Marcus Johnson", position: "Goalkeeper", number: 1, emoji: "👨‍🦰" },
+    { name: "Alex Rivera", position: "Defender", number: 2, emoji: "👨" },
+    { name: "David Chen", position: "Midfielder", number: 7, emoji: "👨" },
+    { name: "Luis Rodriguez", position: "Forward", number: 9, emoji: "👨‍🦲" },
+    { name: "Tom Wilson", position: "Midfielder", number: 10, emoji: "👨" },
+    { name: "Carlos Silva", position: "Defender", number: 3, emoji: "👨‍🦱" }
 ];
 
 // Next match
@@ -21,15 +21,29 @@ const nextMatch = {
 const teamGrid = document.getElementById('team-grid');
 const matchEl = document.getElementById('next-match');
 
-// Init
+// Init with animation
 document.addEventListener('DOMContentLoaded', () => {
     renderTeam();
     renderMatch();
+    setupSmoothScroll();
 });
 
-// Render team
+// Smooth scroll for navigation links
+function setupSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+}
+
+// Render team with animation
 function renderTeam() {
-    teamMembers.forEach(player => {
+    teamMembers.forEach((player, index) => {
         const card = document.createElement('div');
         card.className = 'team-member';
         card.innerHTML = `
@@ -37,11 +51,12 @@ function renderTeam() {
             <h3>${player.name}</h3>
             <p>${player.position}</p>
         `;
+        card.style.animation = `slideUp 0.6s ease-out ${index * 0.1}s backwards`;
         teamGrid.appendChild(card);
     });
 }
 
-// Render match
+// Render match with styling
 function renderMatch() {
     matchEl.innerHTML = `
         <div>
@@ -57,4 +72,5 @@ function renderMatch() {
             <div class="match-info">${nextMatch.stadium}</div>
         </div>
     `;
+    matchEl.style.animation = 'slideUp 0.6s ease-out';
 }
