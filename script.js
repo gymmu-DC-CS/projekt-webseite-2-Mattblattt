@@ -1,11 +1,11 @@
-// Team roster (key players only)
-const teamMembers = [
-    { name: "Marcus Johnson", position: "Goalkeeper", number: 1, emoji: "👨‍🦰" },
-    { name: "Alex Rivera", position: "Defender", number: 2, emoji: "👨" },
-    { name: "David Chen", position: "Midfielder", number: 7, emoji: "👨" },
-    { name: "Luis Rodriguez", position: "Forward", number: 9, emoji: "👨‍🦲" },
-    { name: "Tom Wilson", position: "Midfielder", number: 10, emoji: "👨" },
-    { name: "Carlos Silva", position: "Defender", number: 3, emoji: "👨‍🦱" }
+// Teams
+const teams = [
+    { name: "Men's First Team", description: "Senior", image: "https://img-res.pitchero.com/?url=images.pitchero.com%2Fui%2F2428660%2Fimage_69b91e94afeea.JPG&h=1100&w=1960&t=fit&o=jpg" },
+    { name: "Men's Future Team", description: "Senior", image: "https://tse4.mm.bing.net/th/id/OIP.lu5dQ8fPNIgN0PmRYp8MIQHaE7?rs=1&pid=ImgDetMain&o=7&rm=3" },
+    { name: "Women's First Team", description: "Senior", image: "PASTE_IMAGE_URL_HERE" },
+    { name: "U19s", description: "Yeargroup of 2007-2009", image: "PASTE_IMAGE_URL_HERE" },
+    { name: "U16s", description: "Yeargroup of 2010-2011", image: "PASTE_IMAGE_URL_HERE" },
+    { name: "Youth", description: "Tiger rugby, U8, U10, U12, U14", image: "PASTE_IMAGE_URL_HERE" }
 ];
 
 // Next match
@@ -41,15 +41,15 @@ function setupSmoothScroll() {
     });
 }
 
-// Render team with animation
+// Render teams with animation
 function renderTeam() {
-    teamMembers.forEach((player, index) => {
+    teams.forEach((team, index) => {
         const card = document.createElement('div');
         card.className = 'team-member';
         card.innerHTML = `
-            <div>${player.emoji}<span>${player.number}</span></div>
-            <h3>${player.name}</h3>
-            <p>${player.position}</p>
+            <img src="${team.image}" alt="${team.name}">
+            <h3>${team.name}</h3>
+            <p>${team.description}</p>
         `;
         card.style.animation = `slideUp 0.6s ease-out ${index * 0.1}s backwards`;
         teamGrid.appendChild(card);

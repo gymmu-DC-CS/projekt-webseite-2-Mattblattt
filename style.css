@@ -31,13 +31,6 @@ body {
 /* Navigation */
 .navbar {
     background-color: var(--primary);
-    background-image: 
-        linear-gradient(rgba(15, 20, 25, 0.85), rgba(15, 20, 25, 0.85)),
-        url('https://rugbywuerenlos.ch/wp-content/uploads/2018/08/rfcbasel-logo.jpg');
-    background-size: contain;
-    background-position: left center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     border-bottom: 1px solid var(--border);
     position: sticky;
     top: 0;
@@ -85,8 +78,13 @@ body {
 /* Hero */
 .hero {
     height: 550px;
-    background: linear-gradient(135deg, #0f1419 0%, #1a1f2e 50%, #0f1419 100%);
+    background-color: #0f1419;
+    background-image: 
+        linear-gradient(rgba(15, 20, 25, 0.5), rgba(15, 20, 25, 0.5)),
+        url('https://chm-images-prd.forward-publishing.io/2020/10/9/30f8038e-03c7-41f4-b117-6a389659d9f7.jpeg?s=eab221326de3e225e3dc4a69b979f43a&w=1024&auto=compress%2Cformat');
     background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -233,31 +231,26 @@ body {
 .team-member {
     text-align: center;
     transition: transform 0.3s ease;
+    padding: 15px;
 }
 
 .team-member:hover {
     transform: translateY(-8px);
 }
 
-.team-member div {
-    width: 140px;
-    height: 140px;
-    margin: 0 auto 15px;
-    background: linear-gradient(135deg, #1a73e8 0%, #1a1f2e 100%);
+.team-member img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
     border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 56px;
+    margin-bottom: 15px;
     border: 2px solid var(--secondary);
-    position: relative;
     box-shadow: 0 8px 20px rgba(26, 115, 232, 0.15);
     transition: all 0.3s ease;
 }
 
-.team-member:hover div {
+.team-member:hover img {
     box-shadow: 0 12px 30px rgba(26, 115, 232, 0.25);
-    border-color: #4a9eff;
 }
 
 .team-member span {
