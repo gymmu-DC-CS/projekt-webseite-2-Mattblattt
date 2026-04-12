@@ -1,1 +1,1 @@
-neuer Text
+Am Anfang wusste ich nicht genau, was für eine Webseite ich erstellen wollte, wir haben ja die Freiheit, die webseite über das machen, was wir wollen. Deshalb habe ich mein hobby, Rugby, ins Projekt kombiniert. Meine Idee war es, eine simple Webseite für Basel RFC zu erstellen, die leicht auch für andere Vereine/Sportarten umgewandelt werden kann. Es soll Informationen
