@@ -11,19 +11,19 @@ const teams = [
 // Upcoming matches for each team
 const teamMatches = {
     mensFirst: [
-        { homeTeam: "Basel RFC", awayTeam: "City FC", date: "March 22, 2026", time: "7:00 PM", stadium: "St. Jakob Stadium" }
+        { homeTeam: "Basel First Team", awayTeam: "RC Bern", date: "March 22, 2026", time: "7:00 PM", stadium: "(H) Pruntrutermatte" }
     ],
     mensFuture: [
-        { homeTeam: "Future Basel", awayTeam: "Riverside Club", date: "March 24, 2026", time: "5:00 PM", stadium: "Practice Field" }
+        { homeTeam: "Future Team", awayTeam: "Union Jura Rugby", date: "March 24, 2026", time: "5:00 PM", stadium: "Fribourg Rugby Club" }
     ],
     birds: [
-        { homeTeam: "Basel Birds", awayTeam: "Phoenix RFC", date: "March 23, 2026", time: "6:00 PM", stadium: "Women's Rugby Field" }
+        { homeTeam: "Basel Birds", awayTeam: "Luzern Dangels", date: "March 23, 2026", time: "6:00 PM", stadium: "Rugbyfeld Luzern Allmend" }
     ],
     u19: [
-        { homeTeam: "Basel U19", awayTeam: "City U19", date: "March 25, 2026", time: "4:00 PM", stadium: "Youth Field" }
+        { homeTeam: "Northern Lions U19", awayTeam: "Zug RC", date: "March 25, 2026", time: "4:00 PM", stadium: "Schulhaus Sennweid" }
     ],
     u16: [
-        { homeTeam: "Basel U16", awayTeam: "District U16", date: "March 26, 2026", time: "3:00 PM", stadium: "Youth Field" }
+        { homeTeam: "Northern Lions U16", awayTeam: "AS Morges", date: "March 26, 2026", time: "3:00 PM", stadium: "Morges Rugby Club" }
     ]
 };
 

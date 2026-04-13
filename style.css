@@ -5,14 +5,14 @@
 }
 
 :root {
-    --primary: #0f1419;
-    --secondary: #e8aa14;
-    --accent: #1a73e8;
+    --primary: #000000;
+    --secondary: #ffffff;
+    --accent: #cccccc;
     --text: #ffffff;
-    --text-light: #d0d0d0;
-    --text-muted: #999999;
-    --bg-card: #1a1f2e;
-    --border: #2a3142;
+    --text-light: #cccccc;
+    --text-muted: #666666;
+    --bg-card: #0a0a0a;
+    --border: #1f1f1f;
 }
 
 body {
@@ -78,9 +78,9 @@ body {
 /* Hero */
 .hero {
     height: 550px;
-    background-color: #0f1419;
+    background-color: #000000;
     background-image: 
-        linear-gradient(rgba(15, 20, 25, 0.5), rgba(15, 20, 25, 0.5)),
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url('https://chm-images-prd.forward-publishing.io/2020/10/9/30f8038e-03c7-41f4-b117-6a389659d9f7.jpeg?s=eab221326de3e225e3dc4a69b979f43a&w=1024&auto=compress%2Cformat');
     background-attachment: fixed;
     background-size: cover;
@@ -102,7 +102,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 20% 50%, rgba(232, 170, 20, 0.05) 0%, transparent 50%);
+    background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -159,7 +159,7 @@ body {
     cursor: pointer;
     font-weight: 600;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(232, 170, 20, 0.2);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
     position: relative;
     overflow: hidden;
 }
@@ -178,7 +178,7 @@ body {
 
 .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(232, 170, 20, 0.3);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
 }
 
 .btn:hover::before {
@@ -194,7 +194,7 @@ body {
     font-size: 42px;
     text-align: center;
     margin-bottom: 50px;
-    color: var(--secondary);
+    color: #000000;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1px;
@@ -210,11 +210,20 @@ body {
     transform: translateX(-50%);
     width: 80px;
     height: 3px;
-    background: var(--secondary);
+    background: #000000;
+}
+
+/* U19 section title */
+#u19 h2 {
+    color: #ffffff;
+}
+
+#u19 h2::after {
+    background: #ffffff;
 }
 
 .section.dark {
-    background-color: #0a0d11;
+    background-color: #f5f5f5;
 }
 
 /* Team Section */
@@ -245,12 +254,12 @@ body {
     border-radius: 12px;
     margin-bottom: 15px;
     border: 2px solid var(--secondary);
-    box-shadow: 0 8px 20px rgba(26, 115, 232, 0.15);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
     transition: all 0.3s ease;
 }
 
 .team-member:hover img {
-    box-shadow: 0 12px 30px rgba(26, 115, 232, 0.25);
+    box-shadow: 0 12px 30px rgba(255, 255, 255, 0.25);
 }
 
 .team-member span {
@@ -267,7 +276,7 @@ body {
     justify-content: center;
     font-weight: bold;
     font-size: 13px;
-    box-shadow: 0 4px 12px rgba(232, 170, 20, 0.3);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
 }
 
 .team-member h3 {
@@ -292,7 +301,7 @@ body {
 }
 
 .match {
-    background: linear-gradient(135deg, #1a1f2e 0%, #0f1419 100%);
+    background: linear-gradient(135deg, #0a0a0a 0%, #000000 100%);
     border: 2px solid var(--border);
     border-left: 4px solid var(--secondary);
     padding: 40px;
@@ -308,7 +317,7 @@ body {
 
 .match:hover {
     border-color: var(--secondary);
-    box-shadow: 0 15px 50px rgba(232, 170, 20, 0.15);
+    box-shadow: 0 15px 50px rgba(255, 255, 255, 0.15);
 }
 
 .match > div:first-child {
@@ -359,7 +368,7 @@ body {
 }
 
 .ticket {
-    background: linear-gradient(135deg, #1a1f2e 0%, #0f1419 100%);
+    background: linear-gradient(135deg, #0a0a0a 0%, #000000 100%);
     border: 2px solid var(--border);
     padding: 35px;
     border-radius: 12px;
@@ -384,7 +393,7 @@ body {
 .ticket:hover {
     transform: translateY(-8px);
     border-color: var(--secondary);
-    box-shadow: 0 15px 40px rgba(232, 170, 20, 0.15);
+    box-shadow: 0 15px 40px rgba(255, 255, 255, 0.15);
 }
 
 .ticket:hover::before {
@@ -393,7 +402,7 @@ body {
 
 .ticket.featured {
     border-color: var(--secondary);
-    box-shadow: 0 20px 50px rgba(232, 170, 20, 0.2);
+    box-shadow: 0 20px 50px rgba(255, 255, 255, 0.2);
     transform: scale(1.03);
 }
 
@@ -420,15 +429,32 @@ body {
 
 /* Stadium Section */
 .stadium-info {
-    max-width: 800px;
-    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    align-items: center;
 }
 
 .stadium-content {
-    background: linear-gradient(135deg, #1a1f2e 0%, #0f1419 100%);
+    flex: 1;
+    background: linear-gradient(135deg, #0a0a0a 0%, #000000 100%);
     border: 2px solid var(--border);
     border-left: 4px solid var(--secondary);
     padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.stadium-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stadium-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
     border-radius: 12px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
@@ -455,11 +481,11 @@ body {
 
 /* Footer */
 .footer {
-    background-color: #000000;
+    background-color: #ffffff;
     border-top: 2px solid var(--border);
     padding: 40px 0;
     text-align: center;
-    color: var(--text-light);
+    color: #000000;
 }
 
 .footer p {
